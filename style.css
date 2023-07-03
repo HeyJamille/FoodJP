@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Inter', sans-serif;
+}
+
+main {
+    display: grid;
+    gap: 5rem;
+
+    margin: 5rem 2rem 2rem 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    margin: 2rem 2rem 0 2rem;
+}
+
+header #informacoes, h3 {
+    display: none;
+}
+
+/*
+header #menu span {
+   background-color: black;
+  
+   height: 100rem;
+   width: 100rem;
+   
+   border: black;
+}
+*/
+
+/* Tamanho das fontes */
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.3rem;
+}
+
+p, button {
+    font-size: 2rem;
+} 
+
+/* 1º article */
+.article1 section {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    justify-content: center;
+
+    text-align: justify;
+}
+
+.article1 section button {
+    background-color: #DA2535;
+    color: #FBFBFB;
+
+    width: 29.2rem;
+    height: 4rem;
+    
+    border-radius: 1rem;
+    border: none;
+}
+
+.article1 .segunda-section {
+    display: none;
+}
+
+/* 2º article */
+.article2 section {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+.article2 section #img2 {
+    height: 100%;
+    width: 100%;
+
+    border-radius: 1rem;
+}
+
+.article2 .segunda-section {
+    padding-top: 5rem;
+}
+
+/* 3º article (3 conjuntos iguais) */
+.conjunto-article3 {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.article3, .article3 section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.article3 section #img3 {
+    height: 90%;
+    width: 90%;
+}
+
+/* 4º article */
+.article4, .article4 section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 1rem;
+
+    background-color: #E0E0E0;
+    border-radius: 1rem;
+}
+
+.conjunto-article4 {
+   display: flex;
+   flex-direction: column;
+   
+   gap: 5rem;
+}
+
+.article4 .terceira-section{
+    display: flex;
+    flex-direction: row;
+}
+
+/* 5º article */
+.article5 section #img6 {
+    height: 100%;
+    width: 100%;
+
+    border-radius: 1rem;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5rem;
+
+    font-size: 1.4rem;
+}
+
+footer article {
+    display: flex;
+    flex-direction: row;
+   
+    flex-wrap: wrap;
+   
+    gap: 2rem;
+}
+
+footer article section {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.5rem;
+}
+
+/* MODO CELULAR ENTRE QUE 600PX E 767PX */
+@media screen and (min-width: 600px) and (max-width: 767px) {
+    .article2 {
+        display: flex;
+        flex-direction: row;
+
+        gap: 2rem;
+    }
+    .article2 .segunda-section {
+        width: 100%;
+        padding: 0;
+    }
+    .article2 .segunda-section p {
+        text-align: justify;
+    }
+    /* Footer */
+    footer article {
+        justify-content: space-around;
+    }
+}
+/* MODO TABLET */
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    main, header {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+    header #informacoes, h3 {
+        display: block;
+    }
+    header #informacoes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        gap: 3rem;
+    }
+    .article1, 
+    .article2 {
+        display: flex;
+        flex-direction: row;
+
+        gap: 5rem;
+
+        align-items: center;
+    }
+    .article1 section p {
+        width: 100%;
+    }
+    .article1 > :last-child {
+        display: block;
+    }
+    .article1 .segunda-section img {
+       width: 30rem;
+    }
+
+    /* 2º article */
+    .article2 .segunda-section {
+        width: 100%;
+        padding: 0;
+    }
+    .article2 .segunda-section p {
+        text-align: justify;
+    }
+
+    /* 3º article */
+    .conjunto-article3 {
+        flex-direction: row;
+    }
+
+    /* 4º article */
+    .conjunto-article4  {
+        display: flex;
+        flex-direction: row;
+    }
+    .article4 section, .article4 {
+        justify-content: space-between;
+        align-items: start;
+
+        width: 50%;
+    }
+    .article4 .segunda-section {
+        text-align: justify;
+        width: 100%;
+    }
+
+    /* Footer */
+    footer article {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+/* MODO PC */
+@media screen and (min-width: 1024px) {
+    main, header {
+        margin-left: 15rem;
+        margin-right: 15rem;
+    }
+    header #informacoes, h3 {
+        display: block;
+    }
+    header #informacoes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        gap: 5rem;
+    }
+    header #entrar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        border: 1px solid black;
+        border-radius: 1rem;
+
+        height: 4rem;
+        width: 13rem;
+    }
+    .article1, 
+    .article2 {
+        display: flex;
+        flex-direction: row;
+
+        gap: 10rem;
+
+        align-items: center;
+    }
+    .article1 section p {
+        width: 90%;
+    }
+    .article1 > :last-child   {
+        display: block;
+    }
+    
+    /* 2º article */
+    .article2 > :last-child {
+        text-align: justify;
+        width: 60%;
+    }
+   
+    /* 3º article */
+    .conjunto-article3 {
+        flex-direction: row;
+    }
+    
+    /* 4º article */
+    .conjunto-article4  {
+        display: flex;
+        flex-direction: row;
+    }
+    .article4 section, .article4 {
+        justify-content: start;
+        align-items: start;
+
+        width: 50%;
+    }
+    .article4 .segunda-section {
+        text-align: justify;
+        width: 100%;
+    }
+    
+    /* Footer */
+    footer article {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
